@@ -1,0 +1,23 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udemyLesson1", "udemyLesson1\udemyLesson1.csproj", "{134F41B7-319F-48C7-86A5-2FBEDCAC2F5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "udemyLessonAPI", "udemyLessonAPI\udemyLessonAPI.csproj", "{237E7763-49B8-4413-9E6D-13F7A1634ECA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{134F41B7-319F-48C7-86A5-2FBEDCAC2F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134F41B7-319F-48C7-86A5-2FBEDCAC2F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134F41B7-319F-48C7-86A5-2FBEDCAC2F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134F41B7-319F-48C7-86A5-2FBEDCAC2F5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{237E7763-49B8-4413-9E6D-13F7A1634ECA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{237E7763-49B8-4413-9E6D-13F7A1634ECA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{237E7763-49B8-4413-9E6D-13F7A1634ECA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{237E7763-49B8-4413-9E6D-13F7A1634ECA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

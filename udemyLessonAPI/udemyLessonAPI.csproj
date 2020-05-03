@@ -34,5 +34,7 @@
     <Folder Include="Resource\" />
     <Folder Include="Mapping\" />
     <Folder Include="Extension\" />
+    <Folder Include="Sevcurity\" />
+    <Folder Include="Sevcurity\Token\" />
   </ItemGroup>
 </Project>

@@ -12,6 +12,8 @@ using udemyLessonAPI.Domain.UnitOfWork;
 using udemyLessonAPI.Service;
 using AutoMapper;
 using System;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using udemyLessonAPI.Sevcurity.Token;
 
 namespace udemyLessonAPI
 {
@@ -54,6 +56,32 @@ namespace udemyLessonAPI
 
             });
 
+            var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
+
+            services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(JwtBearerOptions =>
+            {
+                JwtBearerOptions.TokenValidationParameters = new Microsoft.IdentityModel.Tokens.TokenValidationParameters()
+                {
+                    ValidateAudience = true,
+                    ValidAudience = tokenOptions.Audience,
+
+                    ValidateIssuer = true,
+                    ValidIssuer = tokenOptions.Issuer, //Configuration["TokenOptions:Issuer"],==> yöntemlerden birisi bu
+
+                    ValidateLifetime = true,
+
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = SingHandler.GetSecurityKey(tokenOptions.SecurityKey)
+                    
+
+
+
+                };
+
+
+            });
+
+
 
             
 
@@ -82,6 +110,8 @@ namespace udemyLessonAPI
             app.UseRouting();
 
             app.UseAuthorization();
+
+            app.UseAuthentication();
 
             app.UseEndpoints(endpoints =>
             {
